@@ -32,6 +32,9 @@ nav > div {
 
 .nav-item {
     border: solid black 3px;
+    background-color: olivedrab;
+    color: black;
+    text-decoration: none;
     padding: 1%;
     width: 90%;
     margin: auto;
@@ -47,6 +50,14 @@ nav > div {
 .intro a {
     color: orangered;
     text-decoration: none;
+
+}
+
+.intro p {
+    border: solid olivedrab 3px;
+    width: 75%;
+    margin: 0 12% 0 12%;
+    padding: 1% 0 1% 0;
 }
 
 .main-content {
@@ -82,8 +93,9 @@ nav > div {
 }
 
 .container-content > div {
-    max-height: 300px;
-    max-width: 200px;
+    border: dashed yellow 3px;
+    height: 30%;
+    width: 30%;
     align-content: center;
     justify-content: center;
 
@@ -101,9 +113,48 @@ footer {
 }
 
 @media (max-width: 800px) {
+    .container {
+        width: 72%;
+        margin: auto;
+        
+    }
+    
+    .container-content {
+        display: flex-wrap;
+        flex-direction: column;
+        justify-content: center;
 
+    }
+        .container-content :nth-child(1) { order: 2; }
+        .container-content :nth-child(2) { order: 2; }
+        .container-content :nth-child(3) { order: 3; }
+        .container-content :nth-child(4) { order: 3; }
+        .container-content :nth-child(5) { order: 1; }
+
+    .container-content div {
+
+    }
 }
 
 @media (max-width: 500px) {
+    .container {
+        width: 80%;
+        margin: 3%;
+    }
+    
+    .container-content {
+        display: flex-wrap;
+        flex-direction: column;
 
+    }
+        .container-content :nth-child(1) { order: 2; }
+        .container-content :nth-child(2) { order: 2; }
+        .container-content :nth-child(3) { order: 3; }
+        .container-content :nth-child(4) { order: 3; }
+        .container-content :nth-child(5) { order: 1; }
+
+    .container-item > img {
+        width: 90%;
+        height: 90%;
+    }
 }
