@@ -32,7 +32,6 @@ nav > div {
 
 .nav-item {
     border: solid black 3px;
-    background-color: olivedrab;
     padding: 1%;
     width: 90%;
     margin: auto;
@@ -78,13 +77,11 @@ nav > div {
     align-content: center;
     justify-content: space-evenly;
 
-    border: dashed green 3px;
     margin: auto;
     height: inherit;
 }
 
 .container-content > div {
-    border: dashed darkred 3px;
     max-height: 300px;
     max-width: 200px;
     align-content: center;
@@ -101,4 +98,12 @@ nav > div {
 footer {
     margin: 3%;
     background-color: slategrey;
+}
+
+@media (max-width: 800px) {
+
+}
+
+@media (max-width: 500px) {
+
 }
