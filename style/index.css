@@ -77,34 +77,34 @@ nav > div {
 }
 
 .container {
-    max-width: 72%;
-    margin: auto;
-    height: 300px;
-}
-
-.container-content {
+    border: dashed orange 3px;
     display: flex;
     flex-wrap: row nowrap;
     align-content: center;
     justify-content: space-evenly;
-
+    
     margin: auto;
-    height: inherit;
+    width: 72%;
+    height: 60%;
 }
 
-.container-content > div {
+.container-item {
     border: dashed yellow 3px;
-    height: 30%;
-    width: 30%;
+    display: flex;
+    flex-wrap: column wrap;
     align-content: center;
-    justify-content: center;
+    justify-content: space-evenly;
 
-    padding: 2px;
+    padding: 1%;
     margin: inherit;
 }
 
-.container-item > img {
-    margin: auto;
+.container-item2 {
+    width: 250px;
+}
+
+.container-item img {
+    width: 100%;
 }
 
 footer {
@@ -112,40 +112,44 @@ footer {
     background-color: slategrey;
 }
 
+footer nav {
+    margin: 30%;
+}
+    /* media 800px */
 @media (max-width: 800px) {
     .container {
+        border: dashed orange 3px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        
+        justify-content: space-evenly;
         width: 72%;
         margin: auto;
-        
+        height: 30%;
     }
     
-    .container-content {
-        display: flex-wrap;
-        flex-direction: column;
+    .container-item {
+        width: 20%;
         justify-content: center;
 
     }
-        .container-content :nth-child(1) { order: 2; }
-        .container-content :nth-child(2) { order: 2; }
-        .container-content :nth-child(3) { order: 3; }
-        .container-content :nth-child(4) { order: 3; }
-        .container-content :nth-child(5) { order: 1; }
-
-    .container-content div {
-
-    }
+        .container-item :nth-child(1) { order: 1; }
+        .container-item :nth-child(2) { order: 2; }
+        .container-item :nth-child(3) { order: 3; }
+        .container-item :nth-child(4) { order: 4; }
 }
-
+    /* media 500px */
 @media (max-width: 500px) {
     .container {
         width: 80%;
         margin: 3%;
     }
     
-    .container-content {
+    .container-item {
         display: flex-wrap;
         flex-direction: column;
-
+    
     }
         .container-content :nth-child(1) { order: 2; }
         .container-content :nth-child(2) { order: 2; }
@@ -153,8 +157,17 @@ footer {
         .container-content :nth-child(4) { order: 3; }
         .container-content :nth-child(5) { order: 1; }
 
-    .container-item > img {
-        width: 90%;
-        height: 90%;
+    .intro {
+        margin: auto;
+        align-content: center;
+    }
+
+    footer nav {
+        margin: 30%;
+    }
+
+    footer nav a {
+        padding: 30%;
+        align-content: space-between;
     }
 }
